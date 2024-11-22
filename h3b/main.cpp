@@ -1,9 +1,17 @@
-#include <iostream>
+#include "Animal.h"
+#include "Dog.h"
 
-using namespace std;
+int main() {
+    {
+        // Create an Animal object
+        Animal animal;
+        animal.callOut();
+    } // Animal object's destructor is called here
 
-int main()
-{
-    cout << "Hello World!" << endl;
+    {
+        Dog dog;
+        dog.callOut(); // Calls the overridden method in the derived class
+    }
+
     return 0;
 }
